@@ -89,9 +89,10 @@ F1_reduced <- function(ypred, y){
 
 ############################## LOAD DATA ####################################
 
+#Data is available upon request.
 #total_set <- read.csv('')
 #training_set <- read.csv(')
-#test_set <- read.csv('final_data/test_set.csv',row.names = 1)
+#test_set <- read.csv('',row.names = 1)
 test_set$training <- 0
 total_set <- rbind(training_set,test_set)
 
@@ -400,9 +401,9 @@ modell_predictions <- rbind (modell_predictions,training_set)
 
 ##################Starting a new session, loading the data
 
-modell_predictions <- read.csv('final_data/predictions_naivebayes.csv')
+modell_predictions <- read.csv('')
 #The results of the Random Forest were better by manual validation, so the analysis is conducted with that series.
-traintest_randomforest <- read.csv('final_data/traintest_bind_randomforest.csv')
+traintest_randomforest <- read.csv('')
 
 #### Aggregating, plotting
 
@@ -416,7 +417,7 @@ monthly_pred  <- traintest_randomforest %>%
 monthly_pred$date <- make_date(monthly_pred$year,monthly_pred$month)
 
 #Loading the Consumer Confidence Index
-cci <- read.csv('final_data/consumer_confidence_index.csv')
+cci <- read.csv('consumer_confidence_index.csv')
 cci$date <- as.Date(paste(cci$TIME,"-01",sep=""))
 cci$value_sztend <- scale(cci$Value)
 
